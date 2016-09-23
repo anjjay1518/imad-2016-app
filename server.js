@@ -6,26 +6,71 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleOne = {
-    title:'Anjjay karthick | Webapp',
-    date:'Sep 23 2016',
-    heading:'Article-One',
-    content:`<p>
-                    Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                    Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                    Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                    Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                    Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                    Article-tHREE
-            </p>
-            <p>
-                    Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                    Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                    Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                    Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                    Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                    Article-tHREE
-            </p>`
+var articles = {
+    'article-one' : {
+        title:'Anjjay karthick | Webapp',
+        date:'Sep 15 2016',
+        heading:'Article-One',
+        content:`<p>
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Article-tHREE
+                </p>
+                <p>
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Article-tHREE
+                </p>`
+    },
+    'article-two' : {
+        title:'Anjjay karthick | Webapp',
+        date:'Sep 20 2016',
+        heading:'Article-Two',
+        content:`<p>
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Article-Two
+                </p>
+                <p>
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Article-Two
+                </p>`
+    },
+    'article-three' : {
+        title:'Anjjay karthick | Webapp',
+        date:'Sep 23 2016',
+        heading:'Article-Three',
+        content:`<p>
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Article-tHREE
+                </p>
+                <p>
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        Article-tHREE
+                </p>`
+    }
+    
 };
 
 function createTemplate(data)
@@ -69,10 +114,12 @@ app.get('/', function (req, res) { //handling specific url. get request is comin
 
 //Edited for three articles
 
-app.get('/article-one',function(req,res)
+app.get('/:articleName',function(req,res)
 {
+    //articleName = article-one
     //res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-    res.send(createTemplate(articleOne));
+    var articleName = req.params.articleName;
+    res.send(createTemplate(articles(articleName)));
 });
 
 app.get('/article-two',function(req,res)
