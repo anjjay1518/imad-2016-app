@@ -9,6 +9,22 @@ app.get('/', function (req, res) { //handling specific url. get request is comin
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+//Edited for three articles
+
+app.get('/article-one',function(req,res)
+{
+    res.send('Article one requested');
+});
+
+app.get('/article-two',function(req,res)
+{
+    res.send('Article two requested');
+});
+
+app.get('/article-three',function(req,res)
+{
+    res.send('Article three requested');
+});
 app.get('/ui/style.css', function (req, res) { // if this particular url is rquested this one the below function will executed as a response.
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
