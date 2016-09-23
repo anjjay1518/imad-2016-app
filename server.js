@@ -122,6 +122,10 @@ app.get('/:articleName',function(req,res)
     res.send(createTemplate(articles[articleName]));
 });
 
+app.get('/ui/main.js', function (req, res) { // if this particular url is rquested this one the below function will executed as a response.
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+
 app.get('/ui/style.css', function (req, res) { // if this particular url is rquested this one the below function will executed as a response.
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
