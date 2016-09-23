@@ -6,7 +6,14 @@ var element = document.getElementById('id');
 element.innerHTML = "Anjjay";
 
 var img = document.getElementById('madi');
+var marginLeft = 0;
+function moveRight()
+{
+    marginLeft = marginLeft + 2;
+    img.style.marginLeft = marginLeft + px;
+}
 img.onclick = function()
 {
-  img.style.marginLeft = '100px'  ;
+    var interval = setInterval(moveRight,100);
+    
 };
