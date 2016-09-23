@@ -119,7 +119,7 @@ app.get('/:articleName',function(req,res)
     //articleName = article-one
     //res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
     var articleName = req.params.articleName;
-    res.send(createTemplate(articles(articleName)));
+    res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/article-two',function(req,res)
