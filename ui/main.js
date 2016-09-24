@@ -7,7 +7,7 @@ var marginLeft = 0;
 function moveRight()
 {
     marginLeft = marginLeft + 2;
-    if(marginLeft >=100)
+    if(marginLeft >=400)
     {
         alert("Reaches the limit");
     }
