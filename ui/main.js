@@ -1,9 +1,7 @@
 console.log('Loaded!');
 
 var element = document.getElementById('id');
-
 element.innerHTML = "Anjjay";
-
 var img = document.getElementById('madi');
 var marginLeft = 0;
 function moveRight()
@@ -13,6 +11,6 @@ function moveRight()
 }
 img.onclick = function()
 {
-    var interval = setInterval(moveRight,50);
+    var interval = setInterval(moveRight,100);
     
 };
