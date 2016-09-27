@@ -88,6 +88,17 @@ app.get('/counter',function(req,res){
     
 });
 
+var names = [];
+app.get('/submit-name/:name',function(req,res)
+{
+	//Get the name from the rquest
+	//var name = req.params.name; //this is thro the paramater what we are entering
+	// but we need to take from the url like /submit-name?name=XXXX
+	var name = req.query.name;
+	names.push(name);
+	res.send(JSON.stringify(names));
+});
+
 //Edited for three articles
 
 app.get('/:articleName',function(req,res)
@@ -110,16 +121,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var names = [];
-app.get('/submit-name/:name',function(req,res)
-{
-	//Get the name from the rquest
-	//var name = req.params.name; //this is thro the paramater what we are entering
-	// but we need to take from the url like /submit-name?name=XXXX
-	var name = req.query.name;
-	names.push(name);
-	res.send(JSON.stringify(names));
-});
+
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
