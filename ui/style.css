@@ -16,17 +16,17 @@ body {
 }
 
 .img-medium {
-    height: 200px;
+    height: 100px;
 }
 
 .container
 {
-    max-width : 1500px;
+    max-width : 500px;
     margin: 0 auto;
     color : #4a4a4a;
     font-family:sans-serif;
     
-    padding-left : 15px;
-    padding-right:15px;
+    padding-left : 100px;
+    padding-right:100px;
 }
 
