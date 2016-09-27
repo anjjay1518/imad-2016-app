@@ -53,11 +53,11 @@ var name = nameInput.value;
 var submit = document.getElementById('submit_button');
 submit.onclick = function()
 {
-  var name = ['name1','name2','name3','name4','name5'];  
+  var names = ['name1','name2','name3','name4','name5'];  
   var list='';
-  for(var i=0;i<name.length;i++)
+  for(var i=0;i<names.length;i++)
   {
-      list = '<li>' + name[i] + '</li>';
+      list = '<li>' + names[i] + '</li>';
 
   }
   
