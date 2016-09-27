@@ -89,7 +89,7 @@ app.get('/counter',function(req,res){
 });
 
 var names = [];
-app.get('/submit-name/:name',function(req,res)
+app.get('/submit-name',function(req,res)
 {
 	//Get the name from the rquest
 	//var name = req.params.name; //this is thro the paramater what we are entering
