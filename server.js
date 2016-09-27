@@ -112,6 +112,14 @@ app.get('/', function (req, res) { //handling specific url. get request is comin
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var counter =0;
+app.get('/counter',function(req,res){
+   
+        counter +=1;
+        res.send(counter.toString());
+    
+});
+
 //Edited for three articles
 
 app.get('/:articleName',function(req,res)
