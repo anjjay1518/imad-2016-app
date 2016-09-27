@@ -13,20 +13,10 @@ var articles = {
         heading:'Article-One',
         content:`<p>
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                       
                         Article-tHREE
                 </p>
-                <p>
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Article-tHREE
-                </p>`
+              `
     },
     'article-two' : {
         title:'Anjjay karthick | Webapp',
@@ -35,18 +25,7 @@ var articles = {
         content:`<p>
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Article-Two
-                </p>
-                <p>
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Article-Two
+                  
                 </p>`
     },
     'article-three' : {
@@ -56,18 +35,7 @@ var articles = {
         content:`<p>
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Article-tHREE
-                </p>
-                <p>
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                        Article-tHREE
+                
                 </p>`
     }
     
@@ -140,6 +108,15 @@ app.get('/ui/style.css', function (req, res) { // if this particular url is rque
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+
+var names = [];
+app.get('/submit-name/:name',function(req,res)
+{
+	//Get the name from the rquest
+	var name = req.params.name;
+	names.push(name);
+	res.send(JSON.stringify(names));
 });
 
 
