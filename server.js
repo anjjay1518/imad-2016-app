@@ -114,7 +114,9 @@ var names = [];
 app.get('/submit-name/:name',function(req,res)
 {
 	//Get the name from the rquest
-	var name = req.params.name;
+	//var name = req.params.name; //this is thro the paramater what we are entering
+	// but we need to take from the url like /submit-name?name=XXXX
+	var name = req.query.name;
 	names.push(name);
 	res.send(JSON.stringify(names));
 });
