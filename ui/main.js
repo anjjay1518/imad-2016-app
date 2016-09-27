@@ -25,11 +25,25 @@ img.onclick = function()
 //For counter video
 
 var button = document.getElementById('counter');
-var counter =0;
+//var counter =0;
 
 button.onclick = function()
 {
-    counter +=1;
-    var span = document.getElementById('count');
-    span.innerHTML = counter.toString();
+    //counter +=1;
+    
+    var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function()
+    {
+        if(request.readyState === XMLHttpRequest.DONE )
+        {
+            if(request.status === 304)
+            {
+                var counter = request.responseText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();
+                
+            }
+        }
+    };
 };
