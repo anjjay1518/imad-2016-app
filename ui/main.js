@@ -49,8 +49,7 @@ button.onclick = function()
     request.send(null);
 };
 
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_button');
 submit.onclick = function()
 {
@@ -91,6 +90,8 @@ submit.onclick = function()
         }
     };
     //request.open('GET','http://anjjay1518.imad.hasura-app.io/counter',true);
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     request.open('GET','http://anjjay1518.imad.hasura-app.io/submit-name?name' + name,true);
     request.send(null);
   
