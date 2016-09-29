@@ -122,6 +122,21 @@ app.get('/', function (req, res) { //handling specific url. get request is comin
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var names = [];
+//app.get('/submit-name/:name',function(req,res)
+// query is from URL : http://anjjay1518.imad.hasura-app.io/submit-name?name=karthick
+app.get('/submit-name',function(req,res)
+{
+	//Get the name from the rquest
+	//var name = req.params.name; //this is thro the paramater what we are entering
+	// but we need to take from the url like /submit-name?name=XXXX
+	
+	//req.params.name is used to extract the data given in the parameter after / in URL
+	//var name = req.params.name;
+	var name = req.query.name;
+	names.push(name);
+	res.send(JSON.stringify(names));
+});
 /*var counter =0;
 app.get('/counter',function(req,res){
    
@@ -129,21 +144,6 @@ app.get('/counter',function(req,res){
         res.send(counter.toString());
     
 });*/
-
-var names = [];
-app.get('/submit-name/:name',function(req,res)
-{
-	//Get the name from the rquest
-	//var name = req.params.name; //this is thro the paramater what we are entering
-	// but we need to take from the url like /submit-name?name=XXXX
-	var name = req.params.name;
-	names.push(name);
-	res.send(JSON.stringify(names));
-});
-
-//Edited for the names
-
-
 
 //Edited for three articles
 
