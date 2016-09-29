@@ -75,7 +75,7 @@ submit.onclick = function()
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();*/
                 names = ' ';
-                var names = request.responseText;
+                /*var names = request.responseText;
                 names = JSON.parse(names);
                 var list='';
                   for(var i=0;i<names.length;i++)
@@ -84,15 +84,23 @@ submit.onclick = function()
                   }
                   
                   var ul = document.getElementById('namelist');
-                  ul.innerHTML = list;
-                
+                  ul.innerHTML = list;*/
+                  var feedback = document.getElementById("text");
+                  feedback = JSON.parse(feedback);
+                  var fblist = ' ';
+                  for(var i=0;i<feeback.length;i++)
+                  {
+                      fblist += '<li'> + feedback[i] + '</li>';
+                  }
+                    var ul = document.getElementById('fbul');
+                    ul.innerHTML = fblist;
             }
         }
     };
     //request.open('GET','http://anjjay1518.imad.hasura-app.io/counter',true);
-    var nameInput = document.getElementById('name');
-    var name = nameInput.value;
-    request.open('GET','http://anjjay1518.imad.hasura-app.io/submit-name?name=' + name,true);
+    var nameInput = document.getElementById('text');
+    var fbs = nameInput.value;
+    request.open('GET','http://anjjay1518.imad.hasura-app.io/submit-name?name=' + fbs,true);
     request.send(null);
   
 };
