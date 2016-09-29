@@ -20,7 +20,13 @@ var articles = {
                 <div>
                             Please Enter your valuable comments
                             <input type="text" id="text" placeholder="feedback"/>
+                            <input type="button" value="submit" id="submit" />
                 </div>
+                <div class="footer">
+                            <ul id="feedback">
+                            
+                            </ul>
+                    </div>
               `
     },
     'article-two' : {
@@ -36,7 +42,13 @@ var articles = {
                 <div>
                             Please Enter your valuable comments
                             <input type="text" id="text" placeholder="feedback"/>
+                            <input type="button" value="submit" id="submit" />
                 </div>
+                <div class="footer">
+                            <ul id="fbul">
+                            
+                            </ul>
+                    </div>
                 `
                 
     },
@@ -54,7 +66,13 @@ var articles = {
                 <div>
                             Please Enter your valuable comments
                             <input type="text" id="text" placeholder="feedback"/>
+                            <input type="button" value="submit" id="submit" />
                 </div>
+                <div class="footer">
+                            <ul id="feedback">
+                            
+                            </ul>
+                    </div>
                 `
     }
     
@@ -93,7 +111,7 @@ function createTemplate(data)
                                 ${content}
                             </p>
                         </div>
-                            
+                    
                     </body>
                 </html>`
                 ;
@@ -104,13 +122,13 @@ app.get('/', function (req, res) { //handling specific url. get request is comin
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var counter =0;
+/*var counter =0;
 app.get('/counter',function(req,res){
    
         counter +=1;
         res.send(counter.toString());
     
-});
+});*/
 
 /*
 //Edited for the names
@@ -124,6 +142,18 @@ app.get('/submit-name',function(req,res)
 	names.push(name);
 	res.send(JSON.stringify(names));
 });*/
+
+//Edited for the comments
+var feedback = [];
+app.get('/feedback',function(req,res)
+{
+	//Get the name from the rquest
+	//var name = req.params.name; //this is thro the paramater what we are entering
+	// but we need to take from the url like /submit-name?name=XXXX
+	var fb = document.getElementById("text");
+	feedback.push(fb);
+	res.send(JSON.stringify(feedback));
+});
 
 //Edited for three articles
 
