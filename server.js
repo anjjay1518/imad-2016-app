@@ -16,6 +16,10 @@ var articles = {
                        
                         <b>Article-ONE</b>
                 </p>
+                <div>
+                            Please Enter your valuable comments
+                            <input type="text" id="text" placeholder="feedback"/>
+                </div>
               `
     },
     'article-two' : {
@@ -26,7 +30,13 @@ var articles = {
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
                         <b>Article-TWO</b>
-                </p>`
+                </p>
+                <div>
+                            Please Enter your valuable comments
+                            <input type="text" id="text" placeholder="feedback"/>
+                </div>
+                `
+                
     },
     'article-three' : {
         title:'Anjjay karthick | Webapp',
@@ -37,7 +47,12 @@ var articles = {
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
                         <b>Article-THREE</b>
                 
-                </p>`
+                </p>
+                <div>
+                            Please Enter your valuable comments
+                            <input type="text" id="text" placeholder="feedback"/>
+                </div>
+                `
     }
     
 };
@@ -48,6 +63,7 @@ function createTemplate(data)
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
+    var feedback=data.feedback;
     var htmlTemplate = `
                 <!doctype html>
                 <html>
@@ -71,6 +87,8 @@ function createTemplate(data)
                             </div>
                             ${content}
                         </div>
+                        <hr/>
+                        ${feedback}
                     </body>
                 </html>
     `;
