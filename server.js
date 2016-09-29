@@ -16,6 +16,7 @@ var articles = {
                        
                         <b>Article-ONE</b>
                 </p>
+                <hr/>
                 <div>
                             Please Enter your valuable comments
                             <input type="text" id="text" placeholder="feedback"/>
@@ -31,6 +32,7 @@ var articles = {
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
                         <b>Article-TWO</b>
                 </p>
+                <hr/>
                 <div>
                             Please Enter your valuable comments
                             <input type="text" id="text" placeholder="feedback"/>
@@ -48,6 +50,7 @@ var articles = {
                         <b>Article-THREE</b>
                 
                 </p>
+                <hr/>
                 <div>
                             Please Enter your valuable comments
                             <input type="text" id="text" placeholder="feedback"/>
@@ -87,7 +90,7 @@ function createTemplate(data)
                             </div>
                             ${content}
                         </div>
-                        <hr/>
+                        
                         ${feedback}
                     </body>
                 </html>
