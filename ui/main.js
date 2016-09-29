@@ -69,7 +69,7 @@ submit.onclick = function()
         	ul.innerHTML = list;
 		}
 	}
-}
+};
 	var nameInput = document.getElementById('text');
     var name = nameInput.value;
 	request.open('GET','http://anjjay1518.imad.hasura-app.io/submit-name?name=' + name, true);
