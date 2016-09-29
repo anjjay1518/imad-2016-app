@@ -23,7 +23,7 @@ var articles = {
                             <input type="button" value="submit" id="submit" />
                 </div>
                 <div class="footer">
-                            <ul id="feedback">
+                            <ul id="fbul">
                             
                             </ul>
                     </div>
@@ -69,7 +69,7 @@ var articles = {
                             <input type="button" value="submit" id="submit" />
                 </div>
                 <div class="footer">
-                            <ul id="feedback">
+                            <ul id="fbul">
                             
                             </ul>
                     </div>
