@@ -47,8 +47,7 @@ request.onreadystatechange = function()
 };
 
 //submitting-name
-var nameInput = document.getElementById('text');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit');
 submit.onclick = function()
 {
@@ -70,8 +69,8 @@ submit.onclick = function()
 		}
 	}
 }
-	
-	//Make a request to the counter
+	var nameInput = document.getElementById('text');
+    var name = nameInput.value;
 	request.open('GET','http://anjjay1518.imad.hasura-app.io/submit-name?name=' + name, true);
 	request.send(null);
 	
