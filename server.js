@@ -132,8 +132,8 @@ app.get('/counter',function(req,res){
 
 
 //Edited for the names
-/*var names = [];
-app.get('/submit-name',function(req,res)
+var names = [];
+app.get('/submit-name:name',function(req,res)
 {
 	//Get the name from the rquest
 	//var name = req.params.name; //this is thro the paramater what we are entering
@@ -141,7 +141,7 @@ app.get('/submit-name',function(req,res)
 	var name = req.query.name;
 	names.push(name);
 	res.send(JSON.stringify(names));
-});*/
+});
 
 //Edited for three articles
 
