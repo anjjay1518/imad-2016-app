@@ -144,7 +144,7 @@ app.get('/submit-name',function(req,res)
 });*/
 
 //Edited for the comments
-var feedback = [];
+/*var feedback = [];
 app.get('/feedback',function(req,res)
 {
 	//Get the name from the rquest
@@ -153,7 +153,7 @@ app.get('/feedback',function(req,res)
 	var fb = document.getElementById("text");
 	feedback.push(fb);
 	res.send(JSON.stringify(feedback));
-});
+});*/
 
 //Edited for three articles
 
