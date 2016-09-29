@@ -93,12 +93,11 @@ function createTemplate(data)
                                 ${content}
                             </p>
                         </div>
-                        
-                        ${feedback}
+                            ${feedback}
                     </body>
                 </html>`
                 ;
-    //return htmlTemplate; 
+    return htmlTemplate; 
 }
 
 app.get('/', function (req, res) { //handling specific url. get request is coming to / the below function will get executed
