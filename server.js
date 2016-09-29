@@ -122,17 +122,17 @@ app.get('/', function (req, res) { //handling specific url. get request is comin
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-/*var counter =0;
+var counter =0;
 app.get('/counter',function(req,res){
    
         counter +=1;
         res.send(counter.toString());
     
-});*/
+});
 
 
 //Edited for the names
-var names = [];
+/*var names = [];
 app.get('/submit-name',function(req,res)
 {
 	//Get the name from the rquest
@@ -141,18 +141,6 @@ app.get('/submit-name',function(req,res)
 	var name = req.query.name;
 	names.push(name);
 	res.send(JSON.stringify(names));
-});
-
-//Edited for the comments
-/*var feedback = [];
-app.get('/feedback',function(req,res)
-{
-	//Get the name from the rquest
-	//var name = req.params.name; //this is thro the paramater what we are entering
-	// but we need to take from the url like /submit-name?name=XXXX
-	var fb = document.getElementById("text");
-	feedback.push(fb);
-	res.send(JSON.stringify(feedback));
 });*/
 
 //Edited for three articles
