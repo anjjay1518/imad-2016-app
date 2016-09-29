@@ -20,7 +20,7 @@ var button = document.getElementById('counter');
 //var counter = 0;
 button.onclick = function()
 {
-	//Make a request to the counter 
+	//Create a request 
     var request = new XMLHttpRequest();
 
 request.onreadystatechange = function()
@@ -36,8 +36,9 @@ request.onreadystatechange = function()
 	}
 };
 	
-	//capture the response and store it in variable
-
+	//Make a request to the counter
+	request.open('GET','http://anjjay1518.imad.hasura-app.io/counter', true);
+	request.send(null);
 
 	//render the variable in the correct span
 	/*counter +=1;
