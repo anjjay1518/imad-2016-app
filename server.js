@@ -14,7 +14,7 @@ var articles = {
         content:`<p>
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
                        
-                        Article-tHREE
+                        <b>Article-ONE</b>
                 </p>
               `
     },
@@ -25,7 +25,7 @@ var articles = {
         content:`<p>
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
-                  
+                        <b>Article-TWO</b>
                 </p>`
     },
     'article-three' : {
@@ -35,6 +35,7 @@ var articles = {
         content:`<p>
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
                         Hai Hai Hai Hai Hai Hai Hai Hai Hai Hai 
+                        <b>Article-THREE</b>
                 
                 </p>`
     }
