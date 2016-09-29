@@ -130,18 +130,19 @@ app.get('/counter',function(req,res){
     
 });*/
 
-app.get('/submit-name',function(req,res)
+var names = [];
+app.get('/submit-name/:name',function(req,res)
 {
 	//Get the name from the rquest
 	//var name = req.params.name; //this is thro the paramater what we are entering
 	// but we need to take from the url like /submit-name?name=XXXX
-	var name = req.query.name;
+	var name = req.params.name;
 	names.push(name);
 	res.send(JSON.stringify(names));
 });
 
 //Edited for the names
-var names = [];
+
 
 
 //Edited for three articles
