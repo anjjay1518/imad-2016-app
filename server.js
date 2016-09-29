@@ -66,7 +66,7 @@ function createTemplate(data)
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-    var feedback=data.feedback;
+   
     var htmlTemplate = `
                 <!doctype html>
                 <html>
@@ -93,7 +93,7 @@ function createTemplate(data)
                                 ${content}
                             </p>
                         </div>
-                            ${feedback}
+                            
                     </body>
                 </html>`
                 ;
