@@ -67,7 +67,7 @@ function createTemplate(data)
     var heading=data.heading;
     var content=data.content;
     var feedback=data.feedback;
-    var htmlTemplate = 
+    var htmlTemplate = `
                 <!doctype html>
                 <html>
                     <head>
@@ -96,7 +96,7 @@ function createTemplate(data)
                         
                         ${feedback}
                     </body>
-                </html>
+                </html>`
                 ;
     return htmlTemplate; 
 }
