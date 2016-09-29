@@ -45,3 +45,19 @@ request.onreadystatechange = function()
 	var span = document.getElementById('count');
 	span.innerHTML = counter.toString();*/
 };
+
+//submitting-name
+var nameInput = document.getElementById('text');
+var name = nameInput.value;
+var submit = document.getElementById('submit');
+submit.onclick = function()
+{
+	var names = ['name1','name2','name3','name4','name5'];
+	var list = ' ';
+	for(var i=0; i<names.length; i++)
+	{
+		list += '<li>' + names[i] + '</li>';
+	}
+	var ul=document.getElementById('namelist');
+	ul.innerHTML = list;
+};
