@@ -22,8 +22,7 @@ button.onclick = function()
 {
 	//Create a request 
     var request = new XMLHttpRequest();
-
-request.onreadystatechange = function()
+    request.onreadystatechange = function()
 {
 	if(request.readyState === XMLHttpRequest.DONE)
 	{
@@ -51,6 +50,8 @@ request.onreadystatechange = function()
 var submit = document.getElementById('submit');
 submit.onclick = function()
 {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function()
 	{
 	if(request.readyState === XMLHttpRequest.DONE)
 	{
