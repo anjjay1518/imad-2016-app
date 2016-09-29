@@ -74,7 +74,7 @@ submit.onclick = function()
                var counter = request.responseText;
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();*/
-                
+                names = ' ';
                 var names = request.responseText;
                 names = JSON.parse(names);
                 var list='';
