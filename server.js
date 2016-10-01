@@ -27,6 +27,12 @@ var articles = {
                             
                             </ul>
                     </div>
+                <form name="form1" action="article-two.html" method="get">
+                    name:<input type ="text" id="text" name="n">
+                    <input type="submit" value="next" >
+                    
+                </form>
+                    
               `
     },
     'article-two' : {
