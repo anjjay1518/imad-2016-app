@@ -17,13 +17,7 @@ var articles = {
                         <b>Article-ONE</b>
                 </p>
                 <hr/>
-                <div>
-                <form name="form1" action="article-two.html" method="get">
-                            Please Enter your valuable comments
-                            <input type="text" id="text" name="n" placeholder="feedback"/>
-                            <input type="button" value="submit" id="submit" />
-                </form>
-                </div>
+                
                 <div class="footer">
                             <ul id="fbul">
                             
@@ -42,11 +36,7 @@ var articles = {
                         <b>Article-TWO</b>
                 </p>
                 <hr/>
-                <div>
-                            Please Enter your valuable comments
-                            <input type="text" id="text" placeholder="feedback"/>
-                            <input type="button" value="submit" id="submit" />
-                </div>
+                
                 <div class="footer">
                             <ul id="fbul">
                             
@@ -66,11 +56,7 @@ var articles = {
                 
                 </p>
                 <hr/>
-                <div>
-                            Please Enter your valuable comments
-                            <input type="text" id="text" placeholder="feedback"/>
-                            <input type="button" value="submit" id="submit" />
-                </div>
+              
                 <div class="footer">
                             <ul id="fbul">
                             
