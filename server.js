@@ -18,20 +18,17 @@ var articles = {
                 </p>
                 <hr/>
                 <div>
+                <form name="form1" action="article-two.html" method="get">
                             Please Enter your valuable comments
-                            <input type="text" id="text" placeholder="feedback"/>
+                            <input type="text" id="text" name="n" placeholder="feedback"/>
                             <input type="button" value="submit" id="submit" />
+                </form>
                 </div>
                 <div class="footer">
                             <ul id="fbul">
                             
                             </ul>
                     </div>
-                <form name="form1" action="article-two.html" method="get">
-                    name:<input type ="text" id="text" name="n">
-                    <input type="submit" value="next" >
-                    
-                </form>
                     
               `
     },
