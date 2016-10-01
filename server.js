@@ -18,11 +18,11 @@ var articles = {
                 </p>
                 <hr/>
                 
-                <div class="footer">
-                            <ul id="fbul">
-                            
-                            </ul>
-                    </div>
+               <input type="text" id="text" placeholder="name"/>
+                    <input type="button" value="submit" id="submit" />
+                    <ul id="namelist">
+                        
+                    </ul>
                     
               `
     },
@@ -37,10 +37,11 @@ var articles = {
                 </p>
                 <hr/>
                 
-                <div class="footer">
-                            <ul id="fbul">
-                            
-                            </ul>
+               <input type="text" id="text" placeholder="name"/>
+                    <input type="button" value="submit" id="submit" />
+                    <ul id="namelist">
+                        
+                    </ul>
                     </div>
                 `
                 
@@ -57,10 +58,11 @@ var articles = {
                 </p>
                 <hr/>
               
-                <div class="footer">
-                            <ul id="fbul">
-                            
-                            </ul>
+               <input type="text" id="text" placeholder="name"/>
+                    <input type="button" value="submit" id="submit" />
+                    <ul id="namelist">
+                        
+                    </ul>
                     </div>
                 `
     }
